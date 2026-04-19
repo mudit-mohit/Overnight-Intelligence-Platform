@@ -89,7 +89,7 @@ export const patternAnalyzer: Tool = {
     const sortedEvents = [...events].sort((a: Event, b: Event) => a.timestamp.getTime() - b.timestamp.getTime());
     for (let i = 0; i < sortedEvents.length - 1; i++) {
       const timeDiff = sortedEvents[i + 1].timestamp.getTime() - sortedEvents[i].timestamp.getTime();
-      if (timeDiff < 300000) { // 5 minutes
+      if (timeDiff < 300000) { 
         patterns.push({
           type: 'temporal_cluster',
           severity: 'medium',
