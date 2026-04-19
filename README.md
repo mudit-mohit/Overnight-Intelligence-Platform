@@ -22,14 +22,15 @@ To enable real AI functionality with Groq's free tier:
 1. Create a Groq account at https://console.groq.com/
 2. Generate an API key at https://console.groq.com/keys
 3. Add API key to `.env.local`:
+   
    ```
    GROQ_API_KEY=gsk_-actual-groq-api-key-here
    ```
-4. Change `usingFallback` to `false` in `src/lib/realAgent.ts` (line 129):
+5. Change `usingFallback` to `false` in `src/lib/realAgent.ts` (line 129):
    ```typescript
    const usingFallback = false;
    ```
-5. Restart the development server
+6. Restart the development server
 
 **Without an API key or with `usingFallback = true`**, the application uses rule-based assessment and will show "Using basic rule-based assessment" in the reasoning panel.
 
